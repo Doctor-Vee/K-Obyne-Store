@@ -1,0 +1,94 @@
+<!-- Don't forget the commented jquery at the bottom ... Know whether to delete it or not -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <title>K Obyne Store</title>
+</head>
+
+<body>
+  <header>
+    <h1>K Obyne Store</h1>
+    <nav>
+      <ul>
+        <a href="#">
+          <li class="current">Search for Articles</li>
+        </a>
+        <a href="/addnew">
+          <li>Add New Article</li>
+        </a>
+        <a href="/viewall">
+          <li>View All Articles</li>
+        </a>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="container" id="search-section">
+    <form action="/search" method="GET">
+      <p class="inputBox">
+        <input type="text" name="search" id="search" placeholder="Type your keyword here..." required>
+        <fieldset>
+          <legend>Constraints</legend>
+          <p id="search-fields">
+            <b>Search Fields</b> <br />
+            <label><input name="sName" type="checkbox" checked> Name </label> <br />
+            <label><input name="sSummary" type="checkbox" checked> Summary </label> <br />
+            <label><input name="sDetails" type="checkbox" checked> Details </label> <br />
+          </p>
+          <p id="display-fields">
+            <b>Display Fields</b> <br />
+            <label><input name="dName" type="checkbox" checked> Name </label> <br />
+            <label><input name="dSummary" type="checkbox" checked> Summary </label> <br />
+            <label><input name="dDetails" type="checkbox" checked> Details </label> <br />
+          </p>
+        </fieldset>
+      </p>
+      <button type="submit">Search</button>
+    </form>
+  </section>
+  <br>
+  <hr>
+
+  <section class="container" id="results">
+    <div class="result">
+      <b>Name of article</b> <br>
+      <i>Summary of Article</i>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quod voluptatum architecto nesciunt iure
+        voluptas natus obcaecati delectus adipisci neque reiciendis ducimus facere aspernatur vero aut aliquam, ipsam
+        quibusdam porro!
+        Dolor neque iure rem dicta cupiditate voluptas. Reiciendis, similique aperiam deleniti possimus voluptates
+        magnam
+        autem voluptas laudantium voluptatibus nisi sequi porro aliquid aspernatur quas ratione doloribus illum
+        quibusdam
+        debitis ipsam?
+        Corrupti, reprehenderit ipsa. At aliquid, sequi, aperiam expedita quas ea similique accusamus explicabo odit in
+        sapiente repudiandae. Optio officia laboriosam labore quod accusantium explicabo, obcaecati dolor eos deleniti
+        aperiam omnis.
+      </p>
+    </div>
+
+    <div class="result">
+        <b>Name of article 2</b> <br>
+        <i>Summary of Article 2</i>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quod voluptatum architecto nesciunt iure
+          voluptas natus obcaecati delectus adipisci neque reiciendis ducimus facere aspernatur vero aut aliquam, ipsam
+          quibusdam porro!
+        </p>
+      </div>
+  </section>
+
+  <footer>
+    Developed by Doctor Vee, Copyright &copy; 2019
+  </footer>
+  <!-- <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script> -->
+  <script src="main.js"></script>
+
+</body>
+
+</html>

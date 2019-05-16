@@ -1,0 +1,86 @@
+<!-- Don't forget the commented jquery at the bottom ... Know whether to delete it or not -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="../static/styles.css" />
+  <title>K Obyne Store</title>
+</head>
+
+<body>
+  <header>
+    <h1>K Obyne Store</h1>
+    <nav>
+      <a href="#" class="current">Search for Articles</a>
+      <a href="/addnew">Add New Article</a>
+      <a href="/viewall">View All Articles</a>
+    </nav>
+  </header>
+
+  <section class="container" id="search-section">
+    <form action="/" method="GET">
+      <input type="text" name="search" id="search" placeholder="Type your keyword here..." required>
+      <fieldset>
+        <legend>Search Fields</legend>
+        <p id="search-fields">
+          <label><input name="sTitle" type="checkbox" checked> Title </label>
+          <label><input name="sAuthor" type="checkbox" checked> Author </label>
+          <label><input name="sYear" type="checkbox" checked> Year </label>
+          <label><input name="sJournal" type="checkbox" checked> Journal </label>
+          <label><input name="sResearch" type="checkbox" checked> Research Questions </label>
+          <label><input name="sAims" type="checkbox" checked> Aims or Findings </label>
+          <label><input name="sContributions" type="checkbox" checked> Contributions </label>
+          <label><input name="sTheory" type="checkbox" checked> Theory or Framework </label>
+          <label><input name="sData" type="checkbox" checked> Data </label>
+          <label><input name="sMethod" type="checkbox" checked> Method </label>
+          <label><input name="sVariables" type="checkbox" checked> Variables </label>
+          <label><input name="sOther" type="checkbox" checked> Other Notes </label>
+          <label><input name="sKeywords" type="checkbox" checked> Keywords or Tags </label>
+        </p>
+      </fieldset>
+      <button type="submit">Search</button>
+    </form>
+  </section>
+  <br>
+  <hr>
+
+  <section class="container" id="results">
+    <h2 class="highlight">Results for <%= keyword %> </h2>
+    <% articles.forEach((article) => { %>
+    <div class="result">
+      <b onclick="openClose('more<%= article.id %>')"><%= article.research_questions %></b>
+      <div id="more<%= article.id %>">
+        <p><b>Title: </b><%= article.title %></p>
+        <p><b>Author: </b><i><%= article.author %></i></p>
+        <p><b>Year: </b><%= article.year %></p>
+        <p><b>Journal: </b><%= article.journal %></p>
+        <p><b>Research Questions: </b><%= article.research_questions %></p>
+        <p><b>Aim or Findings: </b><%= article.aims_or_findings %></p>
+        <p><b>Contributions: </b><%= article.contributions %></p>
+        <p><b>Theory or Framework: </b><%= article.theory_or_framework %></p>
+        <p><b>Data: </b><%= article.data %></p>
+        <p><b>Method: </b><%= article.method %></p>
+        <p><b>Variables: </b><%= article.variables %></p>
+        <p><b>Other Notes: </b><%= article.other_notes %></p>
+        <p><b>Keywords or Tags: </b><%= article.keywords_or_tags %></p>
+        <button onclick="deleteData(<%= article.id %>)">Delete</button>
+      </div>
+    </div>
+    <% }); %>
+  </section>
+
+  <div id="footerSpace"></div>
+
+  <footer>
+    Developed by Doctor Vee, Copyright &copy; 2019
+  </footer>
+  <!-- <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script> -->
+  <script src="../static/main.js"></script>
+
+</body>
+
+</html>

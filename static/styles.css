@@ -1,0 +1,172 @@
+body, html {
+  margin: 0;
+  font: 0.85rem/1.5 Montserrat, Arial, Helvetica, sans-serif;
+}
+
+button {
+  background: #3333CC;
+  color: #fff;
+  border-color: #3333CC;
+  line-height: 1;
+  position: relative;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  padding: 8px 15px;
+  margin-top: 10px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .05);
+}
+
+button:hover {
+  box-shadow: 0px 0px 7px #3333CC;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.current {
+  color: #3333CC;
+  font-weight: bold;
+}
+
+hr {
+  border: #aabbcc 0.5px solid
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  background-color: whitesmoke;
+  padding: 0 20px;
+  color: #445566;
+  border-bottom: #aabbcc solid 1px;
+}
+
+header h1 {
+  flex: 1 0 100px;
+  color: #3333CC;
+}
+
+nav {
+  flex: 1 0 200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+}
+
+nav a{
+  flex: 1 0 150px;
+  text-decoration: none;
+  color: #445566;
+  text-align: center;
+}
+
+p#search-fields {
+  float: left;
+}
+
+p#display-fields {
+  float: right;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+input {
+  flex: 1 0 40%;
+  height: 1.5em;
+  font-size: 1.2em;
+  border: 1px solid #3333CC;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin: 10px 0;
+}
+
+input[name="title"], input[name="data"], input[name="keywords_or_tags"] {
+  flex-basis: 90%;
+}
+
+#search {
+  float: left;
+}
+
+fieldset {
+  flex: 1 0 95%;
+  border: 1px solid #3333CC;
+  border-radius: 5px;
+}
+
+fieldset p{
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+fieldset p > * {
+  flex-basis: 100px;
+}
+
+textarea {
+  flex: 1 0 70%;
+  height: 3em;
+  font-size: 1.2em;
+  border: 1px solid #3333CC;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin: 10px 0;
+}
+
+textarea[name="details"] {
+  height: 5em;
+  color: #445566;
+  font-style: oblique;
+}
+
+.result {
+  background-color: whitesmoke;
+  margin: 10px 0px;
+  padding: 10px;
+  text-align: justify;
+}
+
+.result > b {
+  display: block;
+  cursor: pointer;
+  color: #3333CC;
+}
+
+.result i {
+  color: #445566;
+}
+
+.result div {
+  display: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  color: #ffffff;
+  background-color: #3333CC;
+  text-align: center;
+}
+
+#footerSpace {
+  height: 50px;
+  margin: 0;
+  padding: 5px 50px 5px 10px;
+}

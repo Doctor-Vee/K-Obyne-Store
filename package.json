@@ -1,0 +1,19 @@
+{
+  "name": "k-obyne-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "table": "node ./createTable",
+    "start": "node app"
+  },
+  "author": "Victor CHINEWUBEZE",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "pg": "^7.9.0"
+  }
+}

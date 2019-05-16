@@ -1,0 +1,61 @@
+<!-- Don't forget the commented jquery at the bottom ... Know whether to delete it or not -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="../static/styles.css" />
+  <title>K Obyne Store</title>
+</head>
+
+<body>
+  <header>
+    <h1>K Obyne Store</h1>
+    <nav>
+      <a href="/">Search for Articles</a>
+      <a href="/addnew">Add New Article</a>
+      <a href="#" class="current">View All Articles</a>
+    </nav>
+  </header>
+
+  <br>
+  <hr>
+
+  <section class="container" id="results">
+    <% articles.forEach((article) => { %>
+    <div class="result">
+      <b onclick="openClose('more<%= article.id %>')"><%= article.research_questions %></b>
+      <div id="more<%= article.id %>">
+        <p><b>Title: </b><%= article.title %></p>
+        <p><b>Author: </b><i><%= article.author %></i></p>
+        <p><b>Year: </b><%= article.year %></p>
+        <p><b>Journal: </b><%= article.journal %></p>
+        <p><b>Research Questions: </b><%= article.research_questions %></p>
+        <p><b>Aim or Findings: </b><%= article.aims_or_findings %></p>
+        <p><b>Contributions: </b><%= article.contributions %></p>
+        <p><b>Theory or Framework: </b><%= article.theory_or_framework %></p>
+        <p><b>Data: </b><%= article.data %></p>
+        <p><b>Method: </b><%= article.method %></p>
+        <p><b>Variables: </b><%= article.variables %></p>
+        <p><b>Other Notes: </b><%= article.other_notes %></p>
+        <p><b>Keywords or Tags: </b><%= article.keywords_or_tags %></p>
+        <button onclick="deleteData(<%= article.id %>)">Delete</button>
+      </div>
+    </div>
+    <% }); %>
+  </section>
+
+  <div id="footerSpace"></div>
+
+  <footer>
+    Developed by Doctor Vee, Copyright &copy; 2019
+  </footer>
+  <!-- <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script> -->
+  <script src="../static/main.js"></script>
+
+</body>
+
+</html>
